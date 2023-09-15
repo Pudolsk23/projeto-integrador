@@ -124,27 +124,150 @@
 .sobre img {margin-right: 3em;}
 .sobre h3, h3{ text-align: center; font-weight: bold; }
 h3 { color: var(--segunda-cor); }
+
 /* CARDAPIO */
-.cardapio {width: 100%; float:left; text-align: center; padding: 3% 4%;}
-.cards {width: 100%; background-color: var(--quarta-cor); text-align: left; border-radius: 50px; margin-bottom: 3%;}
-.cards img {border-radius:50px 50px 0 0;}
-.inner {padding: 7%;}
-.inner a, .inner a:link {font-size: 1.5em; color: var(--segunda-cor); text-decoration: none;}
-.inner h4 {font-size: 1em; color: var(--primeira-cor); margin-top: 2%;}
-.inner p {margin-top: 6%; color: var(--primeira-cor); line-height: 1.5em;}
-.banner {background: var(--segunda-cor);}
+.cardapio {
+  
+  width: 100%;
+  float: left;
+  text-align: center;
+  padding: 3% 4%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card-wrapper {
+  width: calc(33.33% - 20px); /* Distribuir em 3 colunas com margens entre elas */
+  margin-bottom: 100px;
+  box-sizing: border-box;
+}
+
+.cards {
+  margin-top: 30px;
+  width: 23%;
+  background-color: var(--quarta-cor);
+  text-align: left;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  transition: transform 0.5s;
+}
+
+.cards:hover {
+  transform: translateY(-5px); /* Efeito de levantamento ao passar o mouse */
+}
+
+.cards img {
+  border-radius: 50px 50px 0 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.inner {
+  padding: 7%;
+}
+
+.inner a,
+.inner a:link {
+  font-size: 1.5em;
+  color: var(--segunda-cor);
+  text-decoration: none;
+}
+
+.inner h4 {
+  font-size: 1em;
+  color: var(--primeira-cor);
+  margin-top: 2%;
+}
+
+.inner p {
+  margin-top: 6%;
+  color: var(--primeira-cor);
+  line-height: 1.5em;
+}
+
+.banner {
+  background: var(--segunda-cor);
+}
+
 @media screen and (min-width: 768px) {
-  .cards {width: 49%; float: left; margin-right: 1%;}
-  .cards:nth-child(2) {margin-right: 0;}
+  .card-wrapper {
+    width: calc(50% - 20px); /* Distribuir em 2 colunas com margens entre elas */
+  }
 }
 
 @media screen and (min-width: 960px) {
-  .inner p {font-size: 0.7em;}
-  .cards {width: 23%;}
-  .cards:nth-child(2) {margin-right: 1%;}
-  .cards:nth-child(3) {margin-right: 1%;}
+  .card-wrapper {
+    width: calc(33.33% - 20px); /* Distribuir em 3 colunas com margens entre elas */
+  }
 }
-#mensagem_erro p { color: var(--segunda-cor);}
+
+/* Estilo para o formulário de divulgação */
+.form-table {
+  width: 100%;
+  max-width: 500px; /* Defina a largura máxima do formulário */
+  margin: 0 auto; /* Centraliza o formulário na página */
+  border-collapse: collapse;
+  border-radius: 10px;
+  background-color:var(--primeira-cor) /* Cor de fundo */
+  padding 20px;
+  box-shadow: 0 0 10px rgba(12, 5, 5, 0.1); /* Sombra suave */
+}
+
+.form-table tr {
+  border-bottom: var(--segunda-cor)
+}
+
+.form-table td {
+  padding: 10px;
+}
+
+/* Estilo para os campos de entrada de texto */
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilo para o botão de envio */
+.form-table button[type="submit"] {
+  color: var(#ccc); /* Cor do texto do botão */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+/* Estilo para o botão de envio ao passar o mouse */
+.form-table button[type="submit"]:hover {
+  background-color: var(--terceira-cor)/* Cor de fundo do botão ao passar o mouse */
+}
+
+/* Estilo para os cabeçalhos das colunas */
+.form-table td strong {
+  font-weight: bold;
+}
+
+/* Estilo para a descrição da empresa (área de texto) */
+.form-table textarea {
+  resize: vertical; /* Permite redimensionar verticalmente apenas */
+  min-height: 100px; /* Altura mínima da área de texto */
+}
+
+/* Estilo para alinhar o botão de envio no centro */
+.form-table td[colspan="2"] {
+  text-align: center;
+}
+
 /* Rodapé */
 footer {
   display: flex;
@@ -155,32 +278,3 @@ footer {
   color: var(--primeira-cor);
 }
 footer table tr td { width: 15em;}
-/* Calculadora */
-ul { list-style-type:none; padding-left: 10px;}
-#myList li{ 
-  font-weight: bold;
-  text-decoration: none;
-  text-align: left;
-  font-size: 20px;
-  height:25px; 
-  margin: 15px 0 30px 0; 
-}
-#preco_total, #texto_pedido { text-align: center; font-weight: bold; font-size: 40px ; color: var(--segunda-cor); }
-#texto_pedido h3 { visibility: hidden;}
-/* Imprimir */
-@media print {
-  body * {
-    visibility: hidden;
-    font-family: 'Share Tech Mono', monospace;
-  }
-  .printable, .printable * {
-    visibility: visible;
-  }
-  .printable {
-    position: fixed;
-    left: 0;
-    top: 0;
-  }
-  .printable button { visibility: hidden;}
-  #texto_pedido h3 { visibility: visible;}
-}

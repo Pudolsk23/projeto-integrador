@@ -6,11 +6,11 @@
   <title>Hamburgueria Fatec</title>
 
   <link rel="shortcut icon" type="image/x-icon" href="https://img.icons8.com/dusk/2x/hamburger.png">
-  <link rel="stylesheet" href="_css/estilo.css">
+  <link rel="stylesheet" href="../css/estilo.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/ac3cf98fe0.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../css/estilo.css">
   <style>
     button {float: right;}
   </style>
@@ -22,9 +22,9 @@
     <input type="checkbox" id="menuicon"/>
    
     <div id="menuitems">
-      <a href="index.html#inicio">INICIO</a>
-      <a href="index.html#sobre">SOBRE</a>
-      <a href="index.html#cardapio">CARDÁPIO</a>
+      <a href="../index.html">INICIO</a>
+      <a href="../index.html">SOBRE</a>
+      <a href="../index.html">CARDÁPIO</a>
       <a href="#">CALCULADORA</a>
     </div>
   </nav>
@@ -67,21 +67,35 @@
 
 <footer>
   <table align="center">
-    <tr>
-      <td align="left"><i class="fas fa-business-time"></i> <strong>FUNCIONAMENTO</strong><br>
-      Seg à Sex: 17:00 às 23:00<br>
-      Sab e Dom: 17:00 às 03:00<br>
-      Feriados: 14:00 às 23:00</td>
-      <td align="left"><i class="fas fa-receipt"></i> <strong>RETIRADA DE PEDIDOS</strong><br>
-      Basta agendar um horario <br>para a entrega ou pedir <br>pelo Ifood.</td>
-      <td align="left"><strong>ENTRE EM CONTATO</strong><br>
-      <i class="fas fa-phone"></i> 11 2058-2222<br>
-      <i class="fab fa-whatsapp"></i> 11 91234-5678<br>
-      <i class="fab fa-instagram"></i> HamburgueriaFatec</td>
-  </tr>
+    <h1>Comentários e Avaliações</h1>
+
+    <!-- Formulário para inserir comentários -->
+    <form id="comment-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="comment">Comentário:</label>
+        <textarea id="comment" name="comment" rows="4" required></textarea><br>
+        <label for="rating">Avaliação:</label>
+        <select id="rating" name="rating" required>
+            <option value="5">5 - Excelente</option>
+            <option value="4">4 - Muito Bom</option>
+            <option value="3">3 - Bom</option>
+            <option value="2">2 - Regular</option>
+            <option value="1">1 - Ruim</option>
+        </select><br>
+        <button type="submit">Enviar Comentário</button>
+    </form>
+
+    <!-- Div para exibir os comentários -->
+    <div id="comments">
+        <!-- Os comentários serão carregados aqui -->
+    </div>
+
+    
+</body>
   </table>
 </footer>
-  <script src="_js/script.js"></script>
+  <script src="../JS/script.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
