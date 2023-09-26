@@ -1,0 +1,123 @@
+<!DOCTYPE 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hamburgueria Fatec</title>
+
+  <link rel="shortcut icon" type="image/x-icon" href="https://img.icons8.com/dusk/2x/hamburger.png">
+  <link rel="stylesheet" href="../css/estilo.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/ac3cf98fe0.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="../css/estilo.css">
+  <style>
+    button {float: right;}
+  </style>
+</head>
+<body>
+  <!-- Menu -->
+  <nav id="menunav">
+    <label for="menuicon">&#9776;</label>
+    <input type="checkbox" id="menuicon"/>
+   
+    <div id="menuitems">
+      <a href="/index.html">INICIO</a>
+      <a href="/index.html#SOBRE">SOBRE</a>
+      <a href="/index.html#INDICADOS">INDICAÇÕES</a>
+      <a href="/index.html#DIVULGUE">DIVULGUE</a>
+    </div>
+  </nav>
+    
+  <!-- QUIDE DAS ARABIAS -->
+
+<section class="caracteristicas">
+  <h3>CARDAPIO</h3>
+    <p>
+      Verifique as opções do nosso cardápio.
+    </p>
+    <form align="center">
+      <input type="button" name="" value="QUIBE ASSADO" onClick="quibe_assado();" class="btn btn-danger">
+      <input type="button" name="" value="QUIBE CRU" onClick="quibe_cru();" class="btn btn-danger">
+      <input type="button" name="" value="ESFIHA DE CARNE" onClick="esfiha_carne();" class="btn btn-danger">
+      <input type="button" name="" value="FALAFEL" onClick="falafel();" class="btn btn-danger">
+      <input type="button" name="" value="HOMMUS" onClick="hommus();" class="btn btn-danger">
+      <input type="button" name="" value="TABULE" onClick="tabule();" class="btn btn-danger"><br><br>
+      <input type="button" name="" value="BABA GHANOUSH" onClick="baba_ghanoush();" class="btn btn-danger">
+      <input type="button" name="" value="ARROZ COM LENTILHAS" onClick="arroz_lentilhas();" class="btn btn-danger">
+      <input type="button" name="" value="BACALHAU À GOMES DE SÁ" onClick="bacalhau();" class="btn btn-danger">
+      <input type="button" name="" value="DOCE DE AMEIXA" onClick="doce_ameixa();" class="btn btn-danger">
+    </form>
+  <ul class="grid">
+    <li>
+      <i class="fas fa-map-marker-alt"></i>
+      <h4>Localização</h4>
+      <p>
+        Estamos localizados na Rua dos Botecos, 123 - Vila Saborosa, Betãoville - BV, 12345-678.<br>
+        <a href="https://www.google.com/maps/place/Rua+dos+Botecos,+123+-+Vila+Saborosa,+Bet%C3%A3oville+-+BV,+12345-678" target="_blank">Como chegar</a>
+      </p>
+    </li>
+  </ul>
+</section>     
+
+<footer>
+  <table class="center">
+    <h1>Comentários e Avaliações</h1>
+
+    <!-- Formulário para inserir comentários -->
+    
+ 
+    
+ <form id="comment-form">
+  <label for="name">Nome:</label>
+  <input type="text" id="name" name="name" required><br>
+  <label for="comment">Comentário:</label>
+  <textarea id="comment" name="comment" rows="4" required></textarea><br>
+</form>
+<label for="rating">Avaliação:</label>
+<div class="star-rating">
+  <input type="radio" id="star5" name="rating" value="5">
+  <label for="star5"><i class="fas fa-star"></i></label>
+  <input type="radio" id="star4" name="rating" value="4">
+  <label for="star4"><i class="fas fa-star"></i></label>
+  <input type="radio" id="star3" name="rating" value="3">
+  <label for="star3"><i class="fas fa-star"></i></label>
+  <input type="radio" id="star2" name="rating" value="2">
+  <label for="star2"><i class="fas fa-star"></i></label>
+  <input type="radio" id="star1" name="rating" value="1">
+  <label for="star1"><i class="fas fa-star"></i></label>
+</div><br>
+<button class="btn btn-danger" id="enviarComentarios" type="button">Enviar Comentários</button>
+
+<script>
+  document.getElementById('enviarComentarios').addEventListener('click', function() {
+    var formulario = document.getElementById('comment-form');
+    formulario.action = "https://formspree.io/f/mrgwlkoe";
+    formulario.method = "POST";
+    formulario.submit();
+  });
+</script>
+
+
+    <!-- Div para exibir os comentários -->
+    <div id="comments">
+        <!-- Os comentários serão carregados aqui -->
+    </div>
+
+</body>
+  </table>
+</footer>
+
+    
+</body>
+  </table>
+</footer>
+  <script src="../JS/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  
+</html>
+
+
+
