@@ -24,7 +24,6 @@ function loadComments() {
         commentsDiv.appendChild(commentElement);
     });
 }
-
 // Evento de envio do formulário
 const commentForm = document.getElementById('comment-form');
 commentForm.addEventListener('submit', function (e) {
@@ -40,5 +39,40 @@ commentForm.addEventListener('submit', function (e) {
     commentForm.reset();
 });
 
+
+
+
 // Carregue os comentários ao carregar a página
 loadComments();
+// JavaScript para selecionar e colorir as estrelas
+const starRating = document.querySelector('.star-rating');
+const stars = starRating.querySelectorAll('input[type="radio"]');
+const starLabels = starRating.querySelectorAll('label');
+
+stars.forEach((star, index) => {
+  star.addEventListener('change', () => {
+    // Limpa a cor de todas as estrelas
+    starLabels.forEach((label, i) => {
+      if (i <= index) {
+        label.style.color = '#ffdd00'; // Define a cor das estrelas selecionadas (amarelo, por exemplo)
+      } else {
+        label.style.color = '#ddd'; // Define a cor das estrelas não selecionadas
+      }
+    });
+  });
+});
+
+// Função para mostrar o formulário
+function mostrarFormulario() {
+  var formulario = document.getElementById('formulario');
+  formulario.style.display = 'block';
+}
+
+// Função para fechar o formulário
+function fecharFormulario() {
+  var formulario = document.getElementById('formulario');
+  formulario.style.display = 'none';
+}
+
+// Adicione um evento de clique para abrir o formulário quando o botão for clicado
+document.getElementById('abrirFormulario').addEventListener('click', mostrarFormulario);
