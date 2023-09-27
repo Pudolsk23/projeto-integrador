@@ -343,7 +343,6 @@ textarea {
 }
 
 
-
 /* Estilos para o botão flutuante em forma de bolinha */
 #botao-flutuante {
   position: fixed;
@@ -405,6 +404,72 @@ textarea {
 #formulario h3{
   font: 2em italic;
 }
+
+
+/* Estilos para o formulário de pesquisa */
+form {
+  text-align: center; /* Centraliza o conteúdo do formulário horizontalmente */
+  margin-top: 50px; /* Adiciona um espaçamento superior para centralizá-lo verticalmente */
+}
+
+/* Estilos para o campo de entrada (input) */
+input#pesquisa {
+  width: 350px; /* Define a largura do campo de entrada */
+  padding: 10px; /* Adiciona espaço interno ao campo de entrada */
+  font-size: 16px; /* Define o tamanho da fonte */
+  border: 2px solid #ccc; /* Adiciona uma borda */
+  border-radius: 8px; /* Adiciona bordas arredondadas */
+}
+
+/* Estilos para o botão */
+button#clicar {
+  padding: 10px 20px; /* Adiciona espaço interno ao botão */
+  font-size: 16px; /* Define o tamanho da fonte do botão */
+  background-color:var(--segunda-cor); /* Define a cor de fundo do botão */
+  color: #fff; /* Define a cor do texto do botão */
+  border: none; /* Remove a borda do botão */
+  border-radius: 5px; /* Adiciona bordas arredondadas ao botão */
+  cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+}
+
+/* muda a cor botão ao passar o mouse sobre ele */
+button#clicar:hover {
+  background-color:var(--terceira-cor); /* Altera a cor de fundo ao passar o mouse sobre o botão */
+}
+
+/* Estilo para a seção de Horário de Funcionamento */
+.horario {
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+}
+
+/* Estilo para o título "Horário de Funcionamento" */
+.horario h4 {
+  font-size: 24px;
+  color: var(--segunda-cor);
+ 
+}
+
+/* Estilo para os dias da semana e horários */
+.horario p {
+  font-size: 18px;
+  color:var(--cor-menu);
+  margin: 5px 0;
+}
+
+/* Estilo para o título "Dia de Folga" */
+.horario h4:last-child {
+  margin-top: 20px;
+}
+
+/* Estilo para o parágrafo abaixo do título "Dia de Folga" */
+.horario p:last-child {
+  font-style: italic;
+  color: var();
+}
+
+
 
 
 /* Rodapé */
